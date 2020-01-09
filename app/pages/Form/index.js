@@ -1,10 +1,13 @@
 import Form from 'components/Form'
+import PageWrapper from 'components/PageWrapper'
 
 const FormPage = () => {
   return (
-    <div className="form-page">
-      <Form />
-    </div>
+    <PageWrapper className="form-page">
+      <div className="container">
+        <Form />
+      </div>
+    </PageWrapper>
   )
 }
 

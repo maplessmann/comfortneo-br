@@ -6,10 +6,10 @@ import 'styles/main.scss'
 
 const App = () => {
   return (
-    <div className="app-layout">
+    <main className="app-layout">
       <Header />
       <Routes />
-    </div>
+    </main>
   )
 }
 

@@ -1,17 +1,26 @@
-import { Link } from 'react-router-dom'
+import Navigation from 'components/Navigation'
+
+const navigationList = [
+  {
+    label: 'Home',
+    path: '/',
+    isActive: true,
+  },
+  {
+    label: 'Avaliação',
+    path: '/avaliar/',
+    isActive: false,
+  },
+]
 
 const Header = () => {
   return (
-    <nav className="main-header">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/avaliar/">Avaliação</Link>
-        </li>
-      </ul>
-    </nav>
+    <header className="main-header">
+      <div className="container">
+        <h1 className="title">Tradução Comfortneo</h1>
+        <Navigation list={navigationList} />
+      </div>
+    </header>
   )
 }
 

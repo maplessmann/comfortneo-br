@@ -1,0 +1,39 @@
+.main-nav {
+  padding-top: spacing(4);
+
+  > .list > .item {
+
+    .link {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transition: opacity .3s ease;
+      opacity: .6;
+      font-size: toRem(17px);
+
+      &.-active {
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      &:hover {
+        opacity: .87;
+      }
+    }
+    
+    @include above(m) {
+      padding-top: spacing(2);
+      padding-bottom: spacing(2);
+    }
+  }
+
+  @include below(m) {
+    > .list {
+      display: flex;
+
+      .item + .item {
+        margin-left: 20px;
+      }
+    }
+  }
+}

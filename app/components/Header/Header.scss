@@ -1,0 +1,16 @@
+.main-header {
+  padding-top: spacing(5);
+  padding-bottom: spacing(5);
+  background-color: $primary-color;
+  z-index: 2;
+
+  .title {
+    font-size: toRem(30px);
+    color: #fff;
+  }
+
+  @include above(m) {
+    padding-top: spacing(6);
+    padding-bottom: spacing(6);
+  }
+}
