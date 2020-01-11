@@ -30,8 +30,12 @@ html {
 
 html,
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
+}
+
+.app-layout {
+	overflow: hidden;
 }
 
 .container {
