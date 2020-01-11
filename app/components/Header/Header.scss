@@ -12,5 +12,9 @@
   @include above(m) {
     padding-top: spacing(6);
     padding-bottom: spacing(6);
+
+    .title {
+      font-size: toRem(20px);
+    }
   }
 }

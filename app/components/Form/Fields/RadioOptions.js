@@ -6,8 +6,8 @@ export default ({ options = [], name }) => {
 
     return (
       <div className="radio-options" key={value}>
-        <Field id={model} type="radio" name={name} value={value} />
-        <label htmlFor={model}>{label}</label>
+        <Field className="input" id={model} type="radio" name={name} value={value} />
+        <label className="input-label" htmlFor={model}>{label}</label>
       </div>
     )
   })

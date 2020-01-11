@@ -1,7 +1,41 @@
-.form {
+.form-wrapper {
+  max-width: 528px;
+  margin: 0 auto;
 
   .form-title {
     font-size: toRem(24px);
-    color: $primary-color;
+    color: $dark-gray;
+    margin-bottom: spacing(5);
+  }
+}
+
+.form {
+  > .field-group {
+    & + .field-group {
+      padding-top: spacing(10);
+    }
+
+    .field-label {
+      display: block;
+      font-size: toRem(14px);
+      line-height: toRem(16px);
+      color: #515262;
+    }
+
+    .field {
+      width: 100%;
+      height: 48px;
+      font-size: toRem(20px);
+      line-height: toRem(26px);
+      border: none;
+      border-bottom: 1px solid #91949d;
+      padding: 0 10px 0 0;
+    }
+  }
+
+  > .form-navigation {
+    margin-top: spacing(8);
+    display: flex;
+    justify-content: space-between;
   }
 }

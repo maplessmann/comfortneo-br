@@ -18,19 +18,21 @@ const Form = ({
       validationSchema={validations}
     >
       {({ isSubmitting }) => (
-        <FormikForm className="form">
+        <div className="form-wrapper">
           <h1 className="form-title">{currentStepTitle}</h1>
-          {currentStepFields.map(
-            ({ component: Component, ...props }, index) => (
-              <Component key={index} {...props} />
-            )
-          )}
-          <FormNavigation
-            isSubmitting={isSubmitting}
-            nextButtonText={nextButtonText}
-            handlePrevButton={handlePrevButton}
-          />
-        </FormikForm>
+          <FormikForm className="form">
+            {currentStepFields.map(
+              ({ component: Component, ...props }, index) => (
+                <Component key={index} {...props} />
+              )
+            )}
+            <FormNavigation
+              isSubmitting={isSubmitting}
+              nextButtonText={nextButtonText}
+              handlePrevButton={handlePrevButton}
+            />
+          </FormikForm>
+        </div>
       )}
     </Formik>
   )

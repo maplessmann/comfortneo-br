@@ -1,0 +1,71 @@
+.radio-options {
+  align-items: center;
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: none;
+  }
+
+  > .input {
+    display: none;
+
+    &:checked + .input-label {
+      color: $primary-color;
+
+      &::before {
+        border-color: $primary-color;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  > .input-label {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    color: $dark-gray;
+    // font-size: toRem(15px);
+
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      align-items: center;
+      border: 1px solid #757575;
+      display: flex;
+      justify-content: center;
+      transition: border-color .2s ease-in, box-shadow .2s ease-in;
+      will-change: border-color, box-shadow;
+      height: 20px;
+      width: 20px;
+      left: 0;
+    }
+
+    &::after {
+      background-color: $primary-color;
+      opacity: 0;
+      transition: opacity .2s ease-in;
+      will-change: opacity;  
+      height: 12px;
+      width: 12px;
+      left: 4px;
+    }
+
+    @include below(m) {
+      font-size: toRem(15px);
+    }
+  }
+}

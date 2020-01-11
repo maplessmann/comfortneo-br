@@ -1,6 +1,13 @@
-const Button = ({ children, onClick }) => {
+import classNames from 'classnames'
+
+const Button = ({ children, onClick, type = 'button', className, ...props }) => {
   return (
-    <button className="button" onClick={onClick}>
+    <button
+      className={classNames('button', className)}
+      onClick={onClick}
+      type={type}
+      {...props}
+    >
       {children}
     </button>
   )

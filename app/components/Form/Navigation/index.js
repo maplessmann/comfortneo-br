@@ -1,12 +1,12 @@
+import Button from 'components/Button'
+
 const FormNavigation = ({ handlePrevButton, isSubmitting, nextButtonText }) => {
   return (
     <div className="form-navigation">
-      <button type="button" onClick={handlePrevButton}>
-        Back
-      </button>
-      <button type="submit" disabled={isSubmitting}>
+      <Button className="-raw" onClick={handlePrevButton}>Voltar</Button>
+      <Button type="submit" disabled={isSubmitting}>
         {nextButtonText}
-      </button>
+      </Button>
     </div>
   )
 }
