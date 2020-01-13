@@ -30,6 +30,13 @@
       border: none;
       border-bottom: 1px solid #91949d;
       padding: 0 10px 0 0;
+
+    }
+
+    textarea.field {
+      border: 1px solid #91949d;
+      margin-top: spacing(2);
+      min-height: 90px;
     }
   }
 

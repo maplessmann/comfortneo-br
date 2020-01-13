@@ -2,6 +2,7 @@ import * as yup from 'yup'
 import Field from 'components/Form/Fields/Field'
 import Email from 'components/Form/Fields/Email'
 import RadioGroup from 'components/Form/Fields/RadioGroup'
+import TextArea from 'components/Form/Fields/TextArea'
 
 const options = [
   {
@@ -22,13 +23,9 @@ const options = [
   },
 ]
 
-const createLabel = ([original, translated]) => {
-  return `<div class="label">Definição original: <strong>${original}</strong></div><div class="sublabel">Tradução: <strong>${translated}</strong></div>`
-}
-
 const createRadioConfig = ({ model, translation }) => ({
   name: model,
-  label: createLabel(translation),
+  label: translation,
   component: RadioGroup,
   initialValue: '',
   validator: yup.string().required(),
@@ -88,6 +85,13 @@ export default {
           model: 'header_mark',
           translation: ['Place a mark', 'Coloque uma marca'],
         }),
+        {
+          name: 'header_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -131,6 +135,13 @@ export default {
           model: 'alertness_fifth_variable',
           translation: ['5. awake and hyperalert', '5. acordado e hiperativo'],
         }),
+        {
+          name: 'alertness_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -177,6 +188,13 @@ export default {
             '5. em pânico (demonstra desespero incontrolável)',
           ],
         }),
+        {
+          name: 'calmness_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -223,6 +241,13 @@ export default {
           model: 'respiratory_fifth_variable',
           translation: ['5. fights ventilator', '5. briga com o ventilador'],
         }),
+        {
+          name: 'respiratory_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -263,6 +288,13 @@ export default {
             '5. choro intenso ou gritos',
           ],
         }),
+        {
+          name: 'crying_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -309,6 +341,13 @@ export default {
             '5. mais de três movimentos vigorosos dos braços e/pernas, ou corpo inteiro',
           ],
         }),
+        {
+          name: 'body_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -352,6 +391,13 @@ export default {
             '5. músculos faciais contorcidos e caretas (aperto dos olhos, sulco da testa, boca aberta, linhas labiais e nasais)',
           ],
         }),
+        {
+          name: 'facial_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -398,6 +444,13 @@ export default {
             '5. tônus muscular extremo (rigidez e flexão dos dedos das mãos e pés)',
           ],
         }),
+        {
+          name: 'body_tone_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -431,6 +484,13 @@ export default {
             '1. estimativa de sofrimento (0= sem angústia a 10= pior sofrimento possível)',
           ],
         }),
+        {
+          name: 'total_score_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
     {
@@ -456,6 +516,13 @@ export default {
             '(antes ou depois da medicação ou da avaliação padrão) *Abreviação NRS: escala numérica de avaliação',
           ],
         }),
+        {
+          name: 'footer_obs',
+          label: 'Observações',
+          component: TextArea,
+          initialValue: '',
+          validator: null,
+        },
       ],
     },
   ],
