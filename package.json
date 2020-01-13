@@ -1,5 +1,5 @@
 {
-  "name": "confortneo-br",
+  "name": "comfortneo-br",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maplessmann/confortneo-br.git"
+    "url": "git+https://github.com/maplessmann/comfortneo-br.git"
   },
   "bugs": {
-    "url": "https://github.com/maplessmann/confortneo-br/issues"
+    "url": "https://github.com/maplessmann/comfortneo-br/issues"
   },
-  "homepage": "https://github.com/maplessmann/confortneo-br#readme",
+  "homepage": "https://github.com/maplessmann/comfortneo-br#readme",
   "description": "",
   "devDependencies": {
     "@babel/cli": "^7.6.0",

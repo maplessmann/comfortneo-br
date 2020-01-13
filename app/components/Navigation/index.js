@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import classNames from 'classnames'
+import NavigationEnhancer from 'enhancers/Navigation'
 
-const Navigation = ({ list }) => {
+const Navigation = ({ navigationList }) => {
   return (
     <nav className="main-nav">
       <ul className="list">
-        {list.map(({ label, path, isActive }, index) => (
+        {navigationList.map(({ label, path, isActive }, index) => (
           <li className="item" key={index}>
             <Link
               className={classNames('link', { '-active': isActive })}
@@ -20,4 +21,4 @@ const Navigation = ({ list }) => {
   )
 }
 
-export default Navigation
+export default NavigationEnhancer(Navigation)
