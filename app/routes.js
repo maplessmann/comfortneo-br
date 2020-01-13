@@ -15,6 +15,10 @@ const routes = [
     path: '/avaliar/',
     component: 'Form',
   },
+  {
+    path: '/sucesso/',
+    component: 'Success',
+  },
 ]
 
 const Routes = () => {

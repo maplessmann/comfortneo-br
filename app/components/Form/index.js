@@ -16,6 +16,7 @@ const Form = ({
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={validations}
+      validateOnChange={false}
     >
       {({ isSubmitting }) => (
         <div className="form-wrapper">

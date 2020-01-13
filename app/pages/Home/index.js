@@ -1,8 +1,10 @@
+import PageWrapper from 'components/PageWrapper'
+
 const Home = () => {
   return (
-    <div className="page-home">
+    <PageWrapper className="home-page">
       <h1>Tradução confortneo</h1>
-    </div>
+    </PageWrapper>
   )
 }
 
