@@ -7,12 +7,18 @@
     color: $dark-gray;
     margin-bottom: spacing(5);
   }
+
+  @include above(m) {
+    .form-title {
+      margin-bottom: spacing(9);
+    }
+  }
 }
 
 .form {
   > .field-group {
     & + .field-group {
-      padding-top: spacing(10);
+      padding-top: spacing(7);
     }
 
     .field-label {
@@ -29,7 +35,6 @@
       border: none;
       border-bottom: 1px solid #91949d;
       padding: 0 10px 0 0;
-
     }
 
     textarea.field {
@@ -41,9 +46,19 @@
     }
   }
 
+  .radio-group + .radio-group {
+    padding-top: spacing(10);
+  }
+
   > .form-navigation {
     margin-top: spacing(8);
     display: flex;
     justify-content: space-between;
+  }
+
+  .field-error {
+    color: #e02e2e;
+    margin-top: spacing(1);
+    display: block;
   }
 }

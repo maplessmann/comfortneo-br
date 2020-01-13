@@ -7,8 +7,8 @@
 	text-decoration: none;
 }
 
-#icons-sprite {
-	display: none !important;
+#react-view ~ div > a > img {
+	display: none;
 }
 
 img,
