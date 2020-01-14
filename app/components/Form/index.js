@@ -1,6 +1,7 @@
 import FormEnhancer from 'enhancers/Form'
 import { Formik, Form as FormikForm } from 'formik'
 import FormNavigation from './Navigation'
+import Loader from 'components/Loader'
 
 const Form = ({
   initialValues,
@@ -10,6 +11,7 @@ const Form = ({
   nextButtonText,
   handlePrevButton,
   currentStepTitle,
+  isSubmittingForm,
 }) => {
   return (
     <Formik
@@ -28,11 +30,12 @@ const Form = ({
               )
             )}
             <FormNavigation
-              isSubmitting={isSubmitting}
+              isSubmitting={isSubmittingForm}
               nextButtonText={nextButtonText}
               handlePrevButton={handlePrevButton}
             />
           </FormikForm>
+          <Loader isVisible={isSubmittingForm} />
         </div>
       )}
     </Formik>

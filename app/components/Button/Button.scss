@@ -23,8 +23,8 @@
 	}
 
 	&.disabled,
-	&[aria-disabled="true"] {
-		background-color: $light-gray;
+	&[disabled] {
+		background-color: #e2e2e2;
 		border: none;
 		color: $dark-gray;
 		pointer-events: none;

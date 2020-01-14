@@ -6,6 +6,7 @@ const handlers = ({
   setCurrentStep,
   sendFormData,
   goToSuccessPage,
+  setIsSubmittingForm,
 }) => {
   const goToPrevStep = () => setCurrentStep(currentStep - 1)
   const goToNextStep = () => {
@@ -29,6 +30,8 @@ const handlers = ({
           goToNextStep()
           return
         }
+
+        setIsSubmittingForm(true)
 
         sendFormData({ emailBody })
           .then(response => {
