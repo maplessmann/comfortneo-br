@@ -28,7 +28,7 @@ const createRadioConfig = ({ model, translation }) => ({
   label: translation,
   component: RadioGroup,
   initialValue: '',
-  validator: yup.string().required(),
+  validator: yup.string().required('Preenchimento obrigatório'),
   options,
 })
 
@@ -44,7 +44,7 @@ export default {
           label: 'Nome completo',
           component: Field,
           initialValue: '',
-          validator: yup.string().required(),
+          validator: yup.string().required('Campo obrigatório'),
         },
         {
           name: 'email',
@@ -53,8 +53,8 @@ export default {
           initialValue: '',
           validator: yup
             .string()
-            .email()
-            .required(),
+            .email('Email inválido')
+            .required('Campo obrigatório'),
         },
       ],
     },
@@ -157,7 +157,7 @@ export default {
           model: 'calmness_first_variable',
           translation: [
             '1. calm (appears lucid and serene)',
-            '1. calma (aparentemente lúcido e sereno)',
+            '1. calmo (aparentemente lúcido e sereno)',
           ],
         }),
         createRadioConfig({
@@ -317,7 +317,7 @@ export default {
           model: 'body_second_variable',
           translation: [
             '2. up to three slight arm and/or leg movements',
-            '2. até três movimentos suaves dos braços ou pernas',
+            '2. até três movimentos suaves dos braços e/ou pernas',
           ],
         }),
         createRadioConfig({
@@ -338,7 +338,7 @@ export default {
           model: 'body_fifth_variable',
           translation: [
             '5. more than three vigorou arm and/or leg movements, or whole body',
-            '5. mais de três movimentos vigorosos dos braços e/pernas, ou corpo inteiro',
+            '5. mais de três movimentos vigorosos dos braços e/ou pernas, ou corpo inteiro',
           ],
         }),
         {
@@ -416,7 +416,7 @@ export default {
           model: 'body_tone_first_variable',
           translation: [
             '1. muscles fully relaxed (open hands, dribbling, open mouth)',
-            '1. músculos totalmente relaxados (mãos abertas, inquieto, boca aberta)',
+            '1. músculos totalmente relaxados (mãos abertas, boca aberta)',
           ],
         }),
         createRadioConfig({
@@ -481,7 +481,7 @@ export default {
           model: 'nrs_distress_description',
           translation: [
             '1. estimate of distress (0 = no distress to 10 = worst possible distress)',
-            '1. estimativa de sofrimento (0= sem angústia a 10= pior sofrimento possível)',
+            '1. estimativa de sofrimento (0= sem sofrimento a 10= pior sofrimento possível)',
           ],
         }),
         {
