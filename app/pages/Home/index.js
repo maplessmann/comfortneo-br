@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <PageWrapper className="home-page">
-      <h1 className="title">Tradução comfortneo</h1>
-      <Link to="/avaliar" className="button">Fazer avaliação</Link>
+      <Link to="/avaliar" className="button">
+        Fazer avaliação
+      </Link>
+      <img
+        src="https://traducao-comfortneo.000webhostapp.com/images/comfort_neo_scale.png"
+        className="image"
+      />
     </PageWrapper>
   )
 }
