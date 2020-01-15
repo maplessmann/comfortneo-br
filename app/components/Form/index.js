@@ -2,6 +2,7 @@ import FormEnhancer from 'enhancers/Form'
 import { Formik, Form as FormikForm } from 'formik'
 import FormNavigation from './Navigation'
 import Loader from 'components/Loader'
+import SuccessMessage from 'components/SuccessMessage'
 
 const Form = ({
   initialValues,
@@ -12,8 +13,11 @@ const Form = ({
   handlePrevButton,
   currentStepTitle,
   isSubmittingForm,
+  formSubmitted,
 }) => {
-  return (
+  return formSubmitted ? (
+    <SuccessMessage />
+  ) : (
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
