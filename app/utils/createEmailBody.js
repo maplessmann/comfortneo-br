@@ -25,8 +25,9 @@ const createEmailBody = payload => {
     const softLabel = isRadioField ? label[1] : label
     const value = payload[currentKey]
     const softValue = isRadioField ? dictionary[value] : value
+    const lineBreak = softLabel === 'Observações' ? '<br /><br />' : '<br />'
 
-    return prev + `<b>${softLabel}:</b> ${softValue}<br />`
+    return prev + `<b>${softLabel}:</b> ${softValue} ${lineBreak}`
   }, '')
 
   return emailBody
