@@ -26,6 +26,10 @@
       font-size: toRem(14px);
       line-height: toRem(16px);
       color: $input-label;
+
+      &.-aux {
+        padding-top: spacing(2);
+      }
     }
 
     .field {
