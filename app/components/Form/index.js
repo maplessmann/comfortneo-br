@@ -3,6 +3,7 @@ import { Formik, Form as FormikForm } from 'formik'
 import FormNavigation from './Navigation'
 import Loader from 'components/Loader'
 import SuccessMessage from 'components/SuccessMessage'
+import ProgressBar from 'components/ProgressBar'
 
 const Form = ({
   initialValues,
@@ -14,6 +15,8 @@ const Form = ({
   currentStepTitle,
   isSubmittingForm,
   formSubmitted,
+  currentStep,
+  totalSteps,
 }) => {
   return formSubmitted ? (
     <SuccessMessage />
@@ -26,6 +29,7 @@ const Form = ({
     >
       {({ isSubmitting }) => (
         <div className="form-wrapper">
+          <ProgressBar currentStep={currentStep + 1} totalSteps={totalSteps} />
           <h1 className="form-title">{currentStepTitle}</h1>
           <FormikForm className="form">
             {currentStepFields.map(

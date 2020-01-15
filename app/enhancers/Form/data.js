@@ -7,6 +7,7 @@ const data = ({ currentStep }) => {
   const currentStepTitle = steps[currentStep].header.title
   const isLastStep = steps.length === currentStep + 1
   const nextButtonText = isLastStep ? 'Enviar' : 'Avançar'
+  const totalSteps = steps.length
 
   return {
     formExperience,
@@ -14,6 +15,7 @@ const data = ({ currentStep }) => {
     isLastStep,
     nextButtonText,
     currentStepTitle,
+    totalSteps,
     sendFormData: data =>
       axios({
         method: 'post',
