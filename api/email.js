@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer')
 
 const user = process.env.USER
 const pass = process.env.PASSWORD
+const recipients = process.env.RECIPIENTS
 
 module.exports.handle = async (event, context) => {
   const { emailBody } = event
@@ -19,7 +20,7 @@ module.exports.handle = async (event, context) => {
 
   await transporter.sendMail({
     from: '"Comfortneo BR 👶🏻" <foo@example.com>',
-    to: 'maplessmann@gmail.com',
+    to: recipients,
     subject: 'Avaliação da tradução',
     html: `Resultado da avaliação:<br /><br />${emailBody}`,
   })
