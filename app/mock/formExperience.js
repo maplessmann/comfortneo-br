@@ -330,14 +330,14 @@ export default {
         createRadioConfig({
           model: 'body_fourth_variable',
           translation: [
-            '4. up to three vigorou arm and/or leg movements',
+            '4. up to three vigorous arm and/or leg movements',
             '4. até três movimentos vigorosos dos braços e/ou pernas',
           ],
         }),
         createRadioConfig({
           model: 'body_fifth_variable',
           translation: [
-            '5. more than three vigorou arm and/or leg movements, or whole body',
+            '5. more than three vigorous arm and/or leg movements, or whole body',
             '5. mais de três movimentos vigorosos dos braços e/ou pernas, ou corpo inteiro',
           ],
         }),
@@ -373,7 +373,7 @@ export default {
         createRadioConfig({
           model: 'facial_third_variable',
           translation: [
-            '3. intermitente eye squeeze and brow furrow',
+            '3. intermittent eye squeeze and brow furrow',
             '3. aperto intermitente dos olhos e sulco das sobrancelhas',
           ],
         }),
